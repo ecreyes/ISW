@@ -19,6 +19,7 @@ class PagesController extends Controller
     	//return $request->input('parametro');
 
         $param = $request->input('parametro');
+        return $param;
         //$output=shell_exec("Rscript scripts/test.R $param");
         //echo $output;
 
