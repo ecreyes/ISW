@@ -1,0 +1,7 @@
+args <- commandArgs(TRUE)
+param <- as.integer(args[1])
+data(trees)
+png(filename="output/test.png", width = 800, height = 600)
+with(trees,plot(Girth,Height))
+graphics.off()
+print(param)
