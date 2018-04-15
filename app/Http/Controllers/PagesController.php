@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Storage;
 
 class PagesController extends Controller
 {
@@ -13,6 +14,8 @@ class PagesController extends Controller
 
     public function callR(Request $request)
     {
+        //->store('public');      
+        return $request->file('csv')->storePubliclyAs('scripts','archivo.csv','public');
     	// $request->input('parametro');
     	// $request->all();
     	// $request->has('parametro');
