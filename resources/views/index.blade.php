@@ -12,8 +12,12 @@
 		  <div class="col-4">
 		  	<div class="card bg-light mb-3">
 				  <div class="card-body">
-					<form method="POST" action="callR">
+					<form method="POST" action="callR" enctype="multipart/form-data">
 						{!!csrf_field()!!}
+						<label for="csv">
+							Archivo CSV
+							<input type="file" name="csv">
+						</label>
 						<label for="parametro">
 							Parametro:
 							<input type="text" name="parametro">
