@@ -16,13 +16,14 @@ class PagesController extends Controller
     {
         //->store('public');      
         return $request->file('csv')->storePubliclyAs('scripts','archivo.csv','public');
+        shell_exec("Rscript scripts/grafico.R");
     	// $request->input('parametro');
     	// $request->all();
     	// $request->has('parametro');
     	//return $request->input('parametro');
 
         $param = $request->input('parametro');
-        $output=shell_exec("Rscript scripts/test.R $param");
+        $output=shell_exec("Rscript scripts/simulacion.R $param");
         echo $output;
 
         echo "<img src='output/test.png'>";
