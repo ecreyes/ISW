@@ -26,8 +26,10 @@ class PagesController extends Controller
         $tasa = $request->input('tasa');
         $precio = $request->input('precio');
         $output=shell_exec("Rscript scripts/simulacion.R $anios $tasa $precio");
-        echo $output;
+        return view('resultados',compact('anios','tasa','precio','output'));
+        
+        #echo $output;
 
-        echo "<img src='output/test.png'>";
+        #echo "<img src='output/test.png'>";
     }
 }

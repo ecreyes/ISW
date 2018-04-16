@@ -13,3 +13,10 @@
 
 Route::get('/',['as'=>'home','uses'=>'PagesController@home']);
 Route::post('callR','PagesController@callR');
+/*
+Route::get('resultados', function () {
+	$var = "hola";
+	$nose = "kk";
+    return view('resultados',compact('var','nose'));
+});
+*/
